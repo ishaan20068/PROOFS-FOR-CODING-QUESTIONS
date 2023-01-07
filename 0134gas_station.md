@@ -22,13 +22,17 @@
 
 
 ## <u>__Lemma 1__</u>
-### Sum of all values in cost > sum of all values in gas if and only if there is no solution
+__$\displaystyle\sum_{i=0}^{n-1}{gas[i]}<\sum_{i=0}^{n-1}cost[i]$__ if and only if there is no solution possible.
 
 ### __Proof__  
 Let us say that this lemma is incorrect. So, for any test case with this property there must be one element say element number $i$ in the array from $0$ to $n-1$ such that starting from this element takes us to the desired solution.  
 
-So, now in the first step, we start by taking all the fuel from 
-
+So, now in the first step, we start by taking all the fuel __gas[i]__ and we spend fuel __cost[i]__ to move from $i$
+to $ i+1$.  
+Now, if this is a valid solution then at all times the fuel in the fuel tank must be non negative. because negative fuel in going from one place to another would mean that the fuel was over in between the trip.
+Now, in going from $j$ to $j+1$ we get __gas[j]__ amount of fuel and we spend fuel __cost[j]__ to move from $j$
+to $ j+1$.  
+So, in the total round trip the cost of fuel incurred is $\displaystyle\sum_{i=0}^{n-1}\textbf{cost[i]}$ and the fuel gained during the way is $\displaystyle\sum_{i=0}^{n-1}\textbf{gas[i]}$. For, completion of the trip the fuel in the tank should never be negative. Now, at the end of the trip the fuel in the tank is $\displaystyle\sum_{i=0}^{n-1}\textbf{gas[i]-cost[i]}$.  
 
 
 
