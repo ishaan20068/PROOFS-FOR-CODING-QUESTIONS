@@ -11,7 +11,7 @@
             then set val=0 and set target=i+1
         else:
             val+=gas[i]-cost[i]
-```
+            
 4. return target
 
 
