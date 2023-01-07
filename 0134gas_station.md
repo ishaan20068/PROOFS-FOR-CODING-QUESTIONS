@@ -21,21 +21,21 @@
 
 The code for this problem is as follows:
 
-class Solution {
-public:
-    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int money=0,petrol=0;
-        for(int i=0;i<gas.size();i++){
-            petrol+=gas[i];money+=cost[i];
-        }
-        if(money>petrol){return -1;}
-        int target=0;int val=0;
-        for(int i=0;i<gas.size();i++){
-            if(val+gas[i]-cost[i]<0){
-                val=0;target=i+1;
-            }
-            else{val+=gas[i]-cost[i];}
-        }
-        return target;
-    }
-};
+class Solution {  
+public:  
+    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {  
+        int money=0,petrol=0;  
+        for(int i=0;i<gas.size();i++){  
+            petrol+=gas[i];money+=cost[i];  
+        }  
+        if(money>petrol){return -1;}  
+        int target=0;int val=0;  
+        for(int i=0;i<gas.size();i++){  
+            if(val+gas[i]-cost[i]<0){  
+                val=0;target=i+1;  
+            }  
+            else{val+=gas[i]-cost[i];}  
+        }  
+        return target;  
+    }  
+};  
