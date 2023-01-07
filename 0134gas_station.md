@@ -20,7 +20,7 @@
 #### Proof
 
 The code for this problem is as follows:
-
+```
 class Solution {  
 public:  
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {  
@@ -39,3 +39,4 @@ public:
         return target;  
     }  
 };  
+```
