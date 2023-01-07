@@ -1,4 +1,8 @@
-# Algorithm:
+# **134. Gas Station**
+
+## <u>__Algorithm:__</u>
+<br>
+
 
 1. First check if the total gas that can be acquired
    is less than the the total cost that the car has to pay on the trip. if sum of elements of cost is greater than the sum of elements gas then return -1
@@ -11,14 +15,28 @@
             then set val=0 and set target=i+1
         else:
             val+=gas[i]-cost[i]
-            
+
 4. return target
+<br>
+<br>
 
 
-## Lemma 1
-#### if sum of all values in cost > sum of all values in gas then there will be no solution
+## <u>__Lemma 1__</u>
+### Sum of all values in cost > sum of all values in gas if and only if there is no solution
 
-#### Proof
+### __Proof__  
+Let us say that this lemma is incorrect. So, for any test case with this property there must be one element say element number $i$ in the array from $0$ to $n-1$ such that starting from this element takes us to the desired solution.  
+
+So, now in the first step, we start by taking all the fuel from 
+
+
+
+
+
+
+
+
+## <u>__Code__</u>
 
 The code for this problem is as follows:
 ```
