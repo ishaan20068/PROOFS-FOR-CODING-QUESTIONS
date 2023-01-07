@@ -5,12 +5,13 @@
 
 2. let target=0 and value=0
 
-3. for 1<=i<=n:
-    if val+gas[i]-cost[i]<0:
-        then set val=0 and set target=i+1
-    else:
-        val+=gas[i]-cost[i]
-
+3. ```
+    for 1<=i<=n:
+        if val+gas[i]-cost[i]<0:
+            then set val=0 and set target=i+1
+        else:
+            val+=gas[i]-cost[i]
+```
 4. return target
 
 
