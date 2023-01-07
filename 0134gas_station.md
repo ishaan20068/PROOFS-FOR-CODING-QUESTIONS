@@ -21,7 +21,7 @@
 <br>
 
 
-## <u>__Lemma 1__</u>
+## <u>__Lemma__</u>
 $\displaystyle\sum_{i=0}^{n-1}{gas[i]}<\sum_{i=0}^{n-1}cost[i]$ if and only if there is no solution possible.
 
 ### __Proof__  
@@ -42,13 +42,14 @@ So, finally the fuel in the tank is negative, which implies that our assumption 
 
 Now, if we assume that a solution exists, then at the end the fuel in the tank must be non negative quantity. So, we must have $\displaystyle\sum_{i=0}^{n-1}{gas[i]}> \sum_{i=0}^{n-1}cost[i]$. This proves the backward implication by contraposition.
 
+## <u>__Theorem__ </u>
+The algorithm mentioned gives the correct solution whenever a solution exists.
 
-
-
-
-
-
-
+### __Proof__
+If target remains zero throughout the algorithm then that means starting from zero would give a correct solution.  
+Consider that target is initially set to $i$ and let us say that it is changed to $j+1$ such that $j>i$ right after the value $i$. Now, we need to just prove that there does not exist any $t$ such that $i<t\leq j$ and starting from $t$ gives us a solution to the problem. Let us assume the contrary.  
+Note that this would mean that $\displaystyle\sum_{u=t}^jgas[u]-cost[u]\geq 0$ as the gas obtained from $t$ to $i$ has to be non negative. But we know that  $\displaystyle\sum_{u=i}^jgas[u]-cost[u]<0$ because we have changed the target variable from $i$ to $j$. Now, $\displaystyle\sum_{u=i}^jgas[u]-cost[u]<0$ $\displaystyle\Rightarrow \sum_{u=i}^{t-1}gas[u]-cost[u]+$ $\displaystyle\sum_{u=t}^jgas[u]-cost[u]<0$.  
+But $\displaystyle\sum_{u=t}^jgas[u]-cost[u]\geq 0$, so we must have $\displaystyle\sum_{u=i}^{t-1}gas[u]-cost[u]< 0$. But in this case the variable target should have been set to $t$ before being set as $j$, which is a contradiction. So, there is no value $t$ such that $i<t\leq j$ and starting from $t$ gives us a solution to the problem. Therefore, in the algorithm, target is never set to a value from where we cannot attain a solution. Hence the algorithm generates a solution to the problem.
 
 ## <u>__Code__</u>
 
