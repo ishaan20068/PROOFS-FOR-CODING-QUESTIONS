@@ -22,7 +22,7 @@
 
 
 ## <u>__Lemma 1__</u>
-__$\displaystyle\sum_{i=0}^{n-1}{gas[i]}<\sum_{i=0}^{n-1}cost[i]$__ if and only if there is no solution possible.
+$\displaystyle\sum_{i=0}^{n-1}{gas[i]}<\sum_{i=0}^{n-1}cost[i]$ if and only if there is no solution possible.
 
 ### __Proof__  
 Let us say that this lemma is incorrect. So, for any test case with this property there must be one element say element number $i$ in the array from $0$ to $n-1$ such that starting from this element takes us to the desired solution.  
